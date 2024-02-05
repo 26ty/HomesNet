@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,EventEmitter,Input,Output } from '@angular/core';
 import { sidnav } from '../data/sidnav-datas/sidnav-datas';
 import { SidenavService } from '../sidenav.service';
 @Component({
@@ -9,6 +9,13 @@ import { SidenavService } from '../sidenav.service';
 export class TopBarComponent {
 
   sidenavList = sidnav
+
+  @Input() sideNavOpened:boolean;
+  @Output() toggleSideNav = new EventEmitter<void>();
+
+  onToggleSideNav() {
+    this.toggleSideNav.emit();
+  }
   constructor(){
 
   }

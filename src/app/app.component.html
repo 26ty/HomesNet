@@ -1,5 +1,5 @@
-<app-top-bar></app-top-bar>
-
+<app-top-bar [sideNavOpened]="sideNavOpened" (toggleSideNav)="toggleSideNav()"></app-top-bar>
+<app-sidenav [sideNavOpened]="sideNavOpened"></app-sidenav>
 <div class="row">
   <div class="col-lg-12">
     <router-outlet></router-outlet>

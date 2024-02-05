@@ -10,6 +10,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 export class SidenavComponent implements OnInit{
   sidenavList = sidnav
 
+  @Input() sideNavOpened:boolean;
   constructor(){
 
   }
