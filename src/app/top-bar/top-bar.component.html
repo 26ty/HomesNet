@@ -1,0 +1,60 @@
+<!-- <header class="brand-name">
+  <button mat-icon-button (click)="sideNav.toggle()">
+    <mat-icon>{{ sideNav.opened ? 'close' : 'menu' }}</mat-icon>
+  </button>
+  <a [routerLink]="['/']">
+    <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
+  </a>
+</header> -->
+
+<mat-toolbar  class="demo-app-header" role="banner">
+  <button mat-icon-button (click)="sideNav.toggle()" style="margin-right: 10px;">
+    <mat-icon>{{ sideNav.opened ? 'close' : 'menu' }}</mat-icon>
+  </button>
+  <a [routerLink]="['/']">
+    <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
+  </a>
+  <div class="spacer"></div>
+</mat-toolbar>
+
+<mat-sidenav-container class="demo-container">
+  <mat-sidenav #sideNav mode="side" class="demo-sidenav">
+    <mat-list mode="push"  class="menu-list">
+      <mat-list-item mat-list-item>
+        <!-- <mat-icon mat-list-icon>settings</mat-icon> -->
+        <div mat-line>管理員選單</div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item mat-list-item class="list-item" routerLink="{{item.route}}" *ngFor="let item of sidenavList">
+        <!-- <mat-icon mat-list-icon>people</mat-icon> -->
+        <div mat-line>{{item.name}}</div>
+      </mat-list-item>
+
+      <!-- <mat-list-item mat-list-item routerLink="{{item.router}}" *ngFor="let item of menuItem">
+        <mat-icon mat-list-icon>people</mat-icon>
+        <div mat-line>{{item.content}}</div>
+      </mat-list-item> -->
+
+      <!-- <mat-list-item mat-list-item routerLink="form" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+        <mat-icon mat-list-icon>people</mat-icon>
+        <div mat-line>表單</div>
+      </mat-list-item>
+
+      <mat-list-item mat-list-item routerLink="department" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+        <mat-icon mat-list-icon>people</mat-icon>
+        <div mat-line>部門</div>
+      </mat-list-item>
+
+      <mat-list-item mat-list-item routerLink="position" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+        <mat-icon mat-list-icon>people</mat-icon>
+        <div mat-line>職稱</div>
+      </mat-list-item> -->
+
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

@@ -1,14 +1,22 @@
-<section>
-  <form>
-    <input type="text" placeholder="Filter by city" #filter>
-    <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
-  </form>
-</section>
-<section class="results">
+<div class="row">
+  <div class="row text-center">
+    <div class="col-lg-12">
+      <section>
+        <form>
+          <input type="text" placeholder="Filter by city" #filter>
+          <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
+        </form>
+      </section>
+      <section class="results">
 
-  <!--房子列表元件-->
-  <app-housing-location
-  *ngFor="let housingLocation of filteredLocationList" [housingLocation]="housingLocation"
-  >
-  </app-housing-location>
-</section>
+        <!--房子列表元件-->
+        <app-housing-location
+        *ngFor="let housingLocation of filteredLocationList" [housingLocation]="housingLocation"
+        >
+        </app-housing-location>
+      </section>
+    </div>
+  </div>
+</div>
+
+
