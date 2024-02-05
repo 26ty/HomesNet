@@ -8,4 +8,9 @@ import { RouterModule } from '@angular/router';
 })
 export class AppComponent {
   title = 'HomesNet';
+  sideNavOpened = false;
+
+  toggleSideNav() {
+    this.sideNavOpened = !this.sideNavOpened;
+  }
 }

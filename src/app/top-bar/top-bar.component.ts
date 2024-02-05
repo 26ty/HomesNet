@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { sidnav } from '../data/sidnav-datas/sidnav-datas';
+import { SidenavService } from '../sidenav.service';
 @Component({
   selector: 'app-top-bar',
   templateUrl: './top-bar.component.html',
@@ -8,4 +9,7 @@ import { sidnav } from '../data/sidnav-datas/sidnav-datas';
 export class TopBarComponent {
 
   sidenavList = sidnav
+  constructor(){
+
+  }
 }

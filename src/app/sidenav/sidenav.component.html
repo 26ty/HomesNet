@@ -1,1 +1,22 @@
-<p>sidenav works!</p>
+<mat-sidenav-container class="demo-container">
+  <mat-sidenav #sideNav mode="side" class="demo-sidenav">
+    <mat-list mode="push"  class="menu-list">
+      <mat-list-item mat-list-item>
+        <!-- <mat-icon mat-list-icon>settings</mat-icon> -->
+        <div mat-line>管理員選單</div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item mat-list-item class="list-item" routerLink="{{item.route}}" *ngFor="let item of sidenavList">
+        <!-- <mat-icon mat-list-icon>people</mat-icon> -->
+        <div mat-line>{{item.name}}</div>
+      </mat-list-item>
+
+
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
