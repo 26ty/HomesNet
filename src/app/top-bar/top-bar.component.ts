@@ -10,7 +10,9 @@ export class TopBarComponent {
 
   sidenavList = sidnav
 
+  // 接收來自父組件的sideNavOpened狀態
   @Input() sideNavOpened:boolean;
+  // 發送toggleSideNav事件給父組件
   @Output() toggleSideNav = new EventEmitter<void>();
 
   onToggleSideNav() {

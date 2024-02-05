@@ -8,8 +8,10 @@ import { RouterModule } from '@angular/router';
 })
 export class AppComponent {
   title = 'HomesNet';
+  // 預設sideNav為關閉狀態
   sideNavOpened = false;
 
+  // 開啟或關閉sideNav
   toggleSideNav() {
     this.sideNavOpened = !this.sideNavOpened;
   }

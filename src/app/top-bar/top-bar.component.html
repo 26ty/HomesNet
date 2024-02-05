@@ -9,8 +9,8 @@
 
 <mat-toolbar  class="demo-app-header" role="banner">
   <button mat-icon-button (click)="onToggleSideNav()" style="margin-right: 10px;">
-    <!-- <mat-icon>{{ sideNav.opened ? 'close' : 'menu' }}</mat-icon> -->
-    <mat-icon>menu</mat-icon>
+    <mat-icon>{{ sideNavOpened ? 'close' : 'menu' }}</mat-icon>
+    <!-- <mat-icon>menu</mat-icon> -->
   </button>
   <a [routerLink]="['/']">
     <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">

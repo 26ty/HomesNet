@@ -10,6 +10,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 export class SidenavComponent implements OnInit{
   sidenavList = sidnav
 
+  // 接收來自父組件的sideNavOpened狀態
   @Input() sideNavOpened:boolean;
   constructor(){
 
