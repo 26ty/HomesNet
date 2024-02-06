@@ -19,12 +19,13 @@ import { MatSidenavModule } from '@angular/material/sidenav';//sidemodule
 import { MatToolbarModule } from '@angular/material/toolbar';//toolbar
 import { MatIconModule } from '@angular/material/icon';//icon
 import { MatListModule } from '@angular/material/list';//List
-import { MatDividerModule } from '@angular/material/divider';
-import { MatButtonModule } from '@angular/material/button';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatDividerModule } from '@angular/material/divider';//divider
+import { MatButtonModule } from '@angular/material/button';//button
+import {MatFormFieldModule} from '@angular/material/form-field';//FormField
 
 import { HeroComponent } from './hero/hero.component';
-import { AddHeroComponent } from './hero/add-hero/add-hero.component';//button
+import { AddHeroComponent } from './hero/add-hero/add-hero.component';
+import { FormComponent } from './form/form.component';//button
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { AddHeroComponent } from './hero/add-hero/add-hero.component';//button
     TopBarComponent,
     SidenavComponent,
     HeroComponent,
-    AddHeroComponent
+    AddHeroComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

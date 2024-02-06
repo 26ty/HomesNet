@@ -1,5 +1,5 @@
  import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators,FormControl} from '@angular/forms';
 @Component({
   selector: 'app-add-hero',
   templateUrl: './add-hero.component.html',
@@ -8,17 +8,20 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class AddHeroComponent implements OnInit{
   // @Input() inputDefaultHero
   @Output() AddHero = new EventEmitter<any>() //輸出事件
+  options: FormGroup;
 
+  constructor(private fb: FormBuilder){
+
+  }
+
+  test:any
   ngOnInit(): void {
     console.log(this.inputDefaultHero)
+      this.options = this.fb.group({
+        test: [""],
+      // age: 0,
+    });
   }
-  // options: FormGroup;
-  // constructor(fb: FormBuilder){
-  //   this.options = fb.group({
-  //     name: '',
-  //     age: 0,
-  //   });
-  // }
 
   // class宣告初始物件
   // inputDefaultHero:Hero = new Hero('', 0)

@@ -10,5 +10,9 @@ export const sidnav = [
   {
     name:"Heros",
     route:"heros"
+  },
+  {
+    name:"Form",
+    route:"forms"
   }
 ]
