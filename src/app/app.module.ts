@@ -13,6 +13,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms'; // 引入FormsModule
 // material
 import { MatSidenavModule } from '@angular/material/sidenav';//sidemodule
 import { MatToolbarModule } from '@angular/material/toolbar';//toolbar
@@ -20,7 +21,10 @@ import { MatIconModule } from '@angular/material/icon';//icon
 import { MatListModule } from '@angular/material/list';//List
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
-import { HeroComponent } from './hero/hero.component';//button
+import {MatFormFieldModule} from '@angular/material/form-field';
+
+import { HeroComponent } from './hero/hero.component';
+import { AddHeroComponent } from './hero/add-hero/add-hero.component';//button
 
 @NgModule({
   declarations: [
@@ -30,13 +34,15 @@ import { HeroComponent } from './hero/hero.component';//button
     DetailsComponent,
     TopBarComponent,
     SidenavComponent,
-    HeroComponent
+    HeroComponent,
+    AddHeroComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule, // 添加 ReactiveFormsModule
+    FormsModule,
     // RouterModule.forRoot([
     //   {path:"",component:HomeComponent},
     //   {path:"details/:id",component:DetailsComponent},
@@ -49,6 +55,7 @@ import { HeroComponent } from './hero/hero.component';//button
     MatListModule,
     MatDividerModule,
     MatButtonModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
