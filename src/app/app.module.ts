@@ -25,7 +25,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';//FormField
 
 import { HeroComponent } from './hero/hero.component';
 import { AddHeroComponent } from './hero/add-hero/add-hero.component';
-import { FormComponent } from './form/form.component';//button
+import { FormComponent } from './form/form.component';
+import { HelloComponent } from './hello/hello.component';//button
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { FormComponent } from './form/form.component';//button
     SidenavComponent,
     HeroComponent,
     AddHeroComponent,
-    FormComponent
+    FormComponent,
+    HelloComponent
   ],
   imports: [
     BrowserModule,

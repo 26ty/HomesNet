@@ -1,4 +1,4 @@
- import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
+ import { Component, Input, Output, OnInit, EventEmitter, ViewChild } from '@angular/core';
 import {FormBuilder, FormGroup, Validators,FormControl} from '@angular/forms';
 @Component({
   selector: 'app-add-hero',
