@@ -1,18 +1,18 @@
-import { Component ,OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.css']
 })
-export class HeroComponent implements OnInit{
+export class HeroComponent implements OnInit {
 
-  DefaultHero:Hero[]
+  DefaultHero: Hero[]
   ngOnInit(): void {
-    this.DefaultHero =[
-      new Hero('兩斤勘吉',35),
-      new Hero('秋本麗子',25),
-      new Hero('野比大雄',12),
+    this.DefaultHero = [
+      new Hero('兩斤勘吉', 35),
+      new Hero('秋本麗子', 25),
+      new Hero('野比大雄', 12),
     ]
     this.DefaultHero.push(new Hero('江戶川柯南', 8))
     console.log(this.DefaultHero)
@@ -25,21 +25,21 @@ export class HeroComponent implements OnInit{
     { name: '江戶川柯南', age: 8 }
   ];
 
-  getAddHero(newHero){
-    console.log("hero.component newHero",newHero)
+  getAddHero(newHero) {
+    console.log("hero.component newHero", newHero)
     this.DefaultHero.push(newHero);
   }
 
 }
 
-export class Hero{
+export class Hero {
   name: string;
   age: number;
-  constructor(name:string,age:number){
+  constructor(name: string, age: number) {
     this.name = name;
     this.age = age
   }
-  sayHi(){
+  sayHi() {
     console.log("hi")
   }
 }

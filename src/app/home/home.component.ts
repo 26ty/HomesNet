@@ -1,7 +1,7 @@
-import { Component, inject  } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
-import { HousingLocation} from '../housing-location/housing-location.component';
+import { HousingLocation } from '../housing-location/housing-location.component';
 import { HousingService } from '../housing.service';
 @Component({
   selector: 'app-home',
@@ -18,7 +18,7 @@ export class HomeComponent {
   // 過濾房屋位置列表
   filteredLocationList: HousingLocation[] = [];
 
-  test:string="test input"
+  test: string = "test input"
   constructor() {
     // 取得房屋資料
     this.housingLocationList = this.housingService.getAllHousingLocations();

@@ -10,13 +10,9 @@
       <section class="results">
 
         <!--房子列表元件-->
-        <app-housing-location
-          *ngFor="let housingLocation of filteredLocationList" [housingLocation]="housingLocation"
-        >
+        <app-housing-location *ngFor="let housingLocation of filteredLocationList" [housingLocation]="housingLocation">
         </app-housing-location>
       </section>
     </div>
   </div>
 </div>
-
-

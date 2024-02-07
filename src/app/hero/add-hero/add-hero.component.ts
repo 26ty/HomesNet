@@ -1,24 +1,24 @@
- import { Component, Input, Output, OnInit, EventEmitter, ViewChild } from '@angular/core';
-import {FormBuilder, FormGroup, Validators,FormControl} from '@angular/forms';
+import { Component, Input, Output, OnInit, EventEmitter, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 @Component({
   selector: 'app-add-hero',
   templateUrl: './add-hero.component.html',
   styleUrls: ['./add-hero.component.css']
 })
-export class AddHeroComponent implements OnInit{
+export class AddHeroComponent implements OnInit {
   // @Input() inputDefaultHero
   @Output() AddHero = new EventEmitter<any>() //輸出事件
   options: FormGroup;
 
-  constructor(private fb: FormBuilder){
+  constructor(private fb: FormBuilder) {
 
   }
 
-  test:any
+  test: any
   ngOnInit(): void {
     console.log(this.inputDefaultHero)
-      this.options = this.fb.group({
-        test: [""],
+    this.options = this.fb.group({
+      test: [""],
       // age: 0,
     });
   }
@@ -27,14 +27,14 @@ export class AddHeroComponent implements OnInit{
   // inputDefaultHero:Hero = new Hero('', 0)
 
   // interface宣告初始物件
-  inputDefaultHero:Hero = {name:'',age:0}
+  inputDefaultHero: Hero = { name: '', age: 0 }
 
-  addHero(){
+  addHero() {
     console.log(this.inputDefaultHero)
     // 將inputDefaultHero傳送出去給父組件
     this.AddHero.emit(this.inputDefaultHero)
     // 清空inputDefaultHero
-    this.inputDefaultHero = {name:'',age:0}
+    this.inputDefaultHero = { name: '', age: 0 }
     //this.inputDefaultHero = new Hero('betty',18)
     //this.inputDefaultHero.sayHi()
   }

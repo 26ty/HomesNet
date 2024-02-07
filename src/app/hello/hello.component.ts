@@ -1,4 +1,4 @@
-import { Component, Input  } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-hello',
@@ -10,18 +10,18 @@ export class HelloComponent {
 
   counter = 10;
 
-  public sayHi(){
+  public sayHi() {
     console.log("Hi!!!")
   }
 
-  addOne(){
+  addOne() {
     this.counter += 1;
   }
 
-  minusOne(){
-    if(this.counter>0){
+  minusOne() {
+    if (this.counter > 0) {
       this.counter -= 1;
-    }else{
+    } else {
       console.log("error!")
     }
   }

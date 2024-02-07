@@ -6,9 +6,9 @@ import { HelloComponent } from '../hello/hello.component';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent implements OnInit{
+export class FormComponent implements OnInit {
 
-  @ViewChild(HelloComponent) hello:HelloComponent;
+  @ViewChild(HelloComponent) hello: HelloComponent;
   applyForm: FormGroup; // 定義一個表單稱為applyForm，並且表單的型別為FormGroup，也就是表單的集合。
 
   constructor(private fb: FormBuilder) { } // 將表單相關元件啟動，並給予名稱fb
@@ -20,9 +20,9 @@ export class FormComponent implements OnInit{
     this.hello.sayHi();
   }
 
-  userName:string
-  password:string
-  email:string
+  userName: string
+  password: string
+  email: string
   ngOnInit(): void {
     this.applyForm = this.fb.group({ // 在元件啟動的時候建立每個表單的控制元件
       userName: ["可以預設資料"],
