@@ -14,5 +14,9 @@ export const sidnav = [
   {
     name:"Form",
     route:"forms"
+  },
+  {
+    name:"Primeng",
+    route:"primeng"
   }
 ]

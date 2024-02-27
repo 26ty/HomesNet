@@ -29,11 +29,9 @@ export class FormComponent implements OnInit {
       password: [""],
       email: [""]
     });
-
-
-
   }
 
+  // 使用viewchild
   onAddOneClick() {
     this.hello.addOne();
   }

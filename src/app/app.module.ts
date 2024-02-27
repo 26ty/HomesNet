@@ -1,19 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // 導入 ReactiveFormsModule
-
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { HousingLocationComponent } from './housing-location/housing-location.component';
-import { DetailsComponent } from './details/details.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
-
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms'; // 引入FormsModule
+
 // material
 import { MatSidenavModule } from '@angular/material/sidenav';//sidemodule
 import { MatToolbarModule } from '@angular/material/toolbar';//toolbar
@@ -23,11 +15,22 @@ import { MatDividerModule } from '@angular/material/divider';//divider
 import { MatButtonModule } from '@angular/material/button';//button
 import {MatFormFieldModule} from '@angular/material/form-field';//FormField
 
+// component
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { HousingLocationComponent } from './housing-location/housing-location.component';
+import { DetailsComponent } from './details/details.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 import { HeroComponent } from './hero/hero.component';
 import { AddHeroComponent } from './hero/add-hero/add-hero.component';
 import { FormComponent } from './form/form.component';
-import { HelloComponent } from './hello/hello.component';//button
+import { HelloComponent } from './hello/hello.component';
+import { PrimengComponent } from './primeng/primeng.component';
 
+// primeng
+import { ButtonModule } from 'primeng/button';
+import { TableModule } from 'primeng/table';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +42,8 @@ import { HelloComponent } from './hello/hello.component';//button
     HeroComponent,
     AddHeroComponent,
     FormComponent,
-    HelloComponent
+    HelloComponent,
+    PrimengComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +63,10 @@ import { HelloComponent } from './hello/hello.component';//button
     MatListModule,
     MatDividerModule,
     MatButtonModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    // primeNG
+    ButtonModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
