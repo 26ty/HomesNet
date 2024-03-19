@@ -31,6 +31,7 @@ import { PrimengComponent } from './primeng/primeng.component';
 // primeng
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
+import { TreeModule } from 'primeng/tree';
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,7 +67,8 @@ import { TableModule } from 'primeng/table';
     MatFormFieldModule,
     // primeNG
     ButtonModule,
-    TableModule
+    TableModule,
+    TreeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

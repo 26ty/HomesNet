@@ -19,12 +19,13 @@ flex: 1;
   box-shadow: 0px 5px 25px var(--shadow-color);
 }
 
-.demo-container{
+.demo-container {
   height: 100%;
 }
 
 .demo-sidenav {
   padding-top: 84px;
+  width: 250px;
   height: 100%;
 }
 

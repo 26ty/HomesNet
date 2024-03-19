@@ -1,22 +1,34 @@
 export const sidnav = [
   {
-    name:"首頁",
-    route:"/"
+    label:"首頁",
+    route:"/",
+    icon: 'pi pi-fw pi-home',
   },
   {
-    name:"Homes",
-    route:"/"
+    label:"Homes",
+    route:"/",
+    icon: 'pi pi-fw pi-home',
   },
   {
-    name:"Heros",
-    route:"heros"
+    label:"Heros",
+    route:"heros",
+    icon: 'pi pi-fw pi-reddit',
   },
   {
-    name:"Form",
-    route:"forms"
+    label:"Form",
+    route:"forms",
+    icon: 'pi pi-fw pi-book',
   },
   {
-    name:"Primeng",
-    route:"primeng"
+    label:"Primeng",
+    route:"primeng",
+    icon: 'pi pi-fw pi-box',
+    children:[
+      {
+        label:"Work",
+        route:"primeng",
+        icon: 'pi pi-fw pi-briefcase',
+      }
+    ]
   }
 ]
